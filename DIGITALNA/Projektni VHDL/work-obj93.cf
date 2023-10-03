@@ -1,0 +1,4 @@
+v 4
+file . "Brojac74S163.vhdl" "98e101ca5310cd3cfe7d186bb13fe47eb4088e39" "20230707070848.164":
+  entity brojac74s163 at 1( 0) + 0 on 11;
+  architecture brojac74s163_beh of brojac74s163 at 12( 314) + 0 on 12;

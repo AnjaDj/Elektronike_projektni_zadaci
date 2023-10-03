@@ -1,0 +1,358 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Monostabilni multivibrator"
+Date "2022-01-11"
+Rev "v_02"
+Comp "Elektrotehnički fakultet \"Nikola tesla\""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Autor : Anja Djaković"
+$EndDescr
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 61D4723C
+P 3650 3250
+F 0 "Q1" H 3841 3296 50  0000 L CNN
+F 1 "BC547" H 3841 3205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3850 3175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3650 3250 50  0001 L CNN
+	1    3650 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R Rc1
+U 1 1 61D4D092
+P 3550 2150
+F 0 "Rc1" H 3620 2196 50  0000 L CNN
+F 1 "242" H 3620 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3480 2150 50  0001 C CNN
+F 3 "~" H 3550 2150 50  0001 C CNN
+	1    3550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61D4D4B0
+P 3950 2450
+F 0 "R1" V 3743 2450 50  0000 C CNN
+F 1 "4k" V 3834 2450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3880 2450 50  0001 C CNN
+F 3 "~" H 3950 2450 50  0001 C CNN
+	1    3950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R RB1
+U 1 1 61D4D894
+P 5000 2150
+F 0 "RB1" H 5070 2196 50  0000 L CNN
+F 1 "4.3k" H 5070 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4930 2150 50  0001 C CNN
+F 3 "~" H 5000 2150 50  0001 C CNN
+	1    5000 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Rc2
+U 1 1 61D4E867
+P 5800 2150
+F 0 "Rc2" H 5870 2196 50  0000 L CNN
+F 1 "2.42k" H 5870 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5730 2150 50  0001 C CNN
+F 3 "~" H 5800 2150 50  0001 C CNN
+	1    5800 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CB1
+U 1 1 61D4EDC3
+P 5400 2450
+F 0 "CB1" V 5148 2450 50  0000 C CNN
+F 1 "33.2uF" V 5239 2450 50  0000 C CNN
+F 2 "Capacitor_THT:C_Radial_D4.0mm_H5.0mm_P1.50mm" H 5438 2300 50  0001 C CNN
+F 3 "~" H 5400 2450 50  0001 C CNN
+	1    5400 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 61D4F312
+P 5700 3150
+F 0 "Q2" H 5891 3196 50  0000 L CNN
+F 1 "BC547" H 5891 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5900 3075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5700 3150 50  0001 L CNN
+	1    5700 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2300 5800 2450
+Wire Wire Line
+	5550 2450 5800 2450
+Wire Wire Line
+	5250 2450 5000 2450
+Wire Wire Line
+	5000 2450 5000 2300
+$Comp
+L Device:D Do1
+U 1 1 61D58400
+P 5000 3950
+F 0 "Do1" V 4954 4030 50  0000 L CNN
+F 1 "D" V 5045 4030 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5000 3950 50  0001 C CNN
+F 3 "~" H 5000 3950 50  0001 C CNN
+	1    5000 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R Ro1
+U 1 1 61D58A81
+P 5000 4500
+F 0 "Ro1" H 5070 4546 50  0000 L CNN
+F 1 "100" H 5070 4455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4930 4500 50  0001 C CNN
+F 3 "~" H 5000 4500 50  0001 C CNN
+	1    5000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C Co1
+U 1 1 61D58FE6
+P 5400 4250
+F 0 "Co1" V 5148 4250 50  0000 C CNN
+F 1 "1uF" V 5239 4250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Radial_D4.0mm_H5.0mm_P1.50mm" H 5438 4100 50  0001 C CNN
+F 3 "~" H 5400 4250 50  0001 C CNN
+	1    5400 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 4250 5000 4250
+Connection ~ 5000 4250
+Wire Wire Line
+	5000 4250 5000 4350
+$Comp
+L power:GND #PWR0101
+U 1 1 61D5B2CB
+P 1700 2750
+F 0 "#PWR0101" H 1700 2500 50  0001 C CNN
+F 1 "GND" H 1705 2577 50  0000 C CNN
+F 2 "" H 1700 2750 50  0001 C CNN
+F 3 "" H 1700 2750 50  0001 C CNN
+	1    1700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2500 1700 2750
+$Comp
+L power:VCC #PWR0103
+U 1 1 61D5EA17
+P 3550 1950
+F 0 "#PWR0103" H 3550 1800 50  0001 C CNN
+F 1 "VCC" H 3565 2123 50  0000 C CNN
+F 2 "" H 3550 1950 50  0001 C CNN
+F 3 "" H 3550 1950 50  0001 C CNN
+	1    3550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 61D60047
+P 5000 1950
+F 0 "#PWR0104" H 5000 1800 50  0001 C CNN
+F 1 "VCC" H 5015 2123 50  0000 C CNN
+F 2 "" H 5000 1950 50  0001 C CNN
+F 3 "" H 5000 1950 50  0001 C CNN
+	1    5000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 61D60F5B
+P 5800 1950
+F 0 "#PWR0105" H 5800 1800 50  0001 C CNN
+F 1 "VCC" H 5815 2123 50  0000 C CNN
+F 2 "" H 5800 1950 50  0001 C CNN
+F 3 "" H 5800 1950 50  0001 C CNN
+	1    5800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1950 5800 2000
+Wire Wire Line
+	5000 1950 5000 2000
+Wire Wire Line
+	3550 1950 3550 2000
+$Comp
+L power:GND #PWR0106
+U 1 1 61D62F56
+P 3550 3650
+F 0 "#PWR0106" H 3550 3400 50  0001 C CNN
+F 1 "GND" H 3555 3477 50  0000 C CNN
+F 2 "" H 3550 3650 50  0001 C CNN
+F 3 "" H 3550 3650 50  0001 C CNN
+	1    3550 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 61D637F2
+P 5800 3550
+F 0 "#PWR0107" H 5800 3300 50  0001 C CNN
+F 1 "GND" H 5805 3377 50  0000 C CNN
+F 2 "" H 5800 3550 50  0001 C CNN
+F 3 "" H 5800 3550 50  0001 C CNN
+	1    5800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3350 5800 3550
+$Comp
+L power:GND #PWR0108
+U 1 1 61D69EE4
+P 5000 4750
+F 0 "#PWR0108" H 5000 4500 50  0001 C CNN
+F 1 "GND" H 5005 4577 50  0000 C CNN
+F 2 "" H 5000 4750 50  0001 C CNN
+F 3 "" H 5000 4750 50  0001 C CNN
+	1    5000 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4750 5000 4650
+Wire Wire Line
+	5000 4100 5000 4250
+Wire Wire Line
+	5000 3150 5000 3800
+Wire Wire Line
+	3550 3450 3550 3650
+Wire Wire Line
+	3550 2300 3550 2450
+Connection ~ 3550 2450
+Wire Wire Line
+	3550 2450 3550 3050
+Wire Wire Line
+	3850 3250 4400 3250
+Wire Wire Line
+	4400 3250 4400 2450
+Wire Wire Line
+	4400 2450 5000 2450
+Connection ~ 5000 2450
+Wire Wire Line
+	5000 3150 5500 3150
+Wire Wire Line
+	5800 2950 5800 2850
+Connection ~ 5800 2450
+Wire Wire Line
+	4300 2450 4300 3150
+Wire Wire Line
+	4300 3150 5000 3150
+Connection ~ 5000 3150
+Wire Wire Line
+	3550 2450 3800 2450
+Wire Wire Line
+	4100 2450 4300 2450
+$Comp
+L Device:LED D1
+U 1 1 61D7FADF
+P 6800 2550
+F 0 "D1" V 6839 2432 50  0000 R CNN
+F 1 "RED" V 6748 2432 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 6800 2550 50  0001 C CNN
+F 3 "~" H 6800 2550 50  0001 C CNN
+	1    6800 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R RD1
+U 1 1 61D80D45
+P 6800 2150
+F 0 "RD1" H 6870 2196 50  0000 L CNN
+F 1 "170" H 6870 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 2150 50  0001 C CNN
+F 3 "~" H 6800 2150 50  0001 C CNN
+	1    6800 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0109
+U 1 1 61D8129B
+P 6800 1950
+F 0 "#PWR0109" H 6800 1800 50  0001 C CNN
+F 1 "VCC" H 6815 2123 50  0000 C CNN
+F 2 "" H 6800 1950 50  0001 C CNN
+F 3 "" H 6800 1950 50  0001 C CNN
+	1    6800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1950 6800 2000
+Wire Wire Line
+	6800 2300 6800 2400
+Wire Wire Line
+	5800 2850 6800 2850
+Wire Wire Line
+	6800 2850 6800 2700
+Connection ~ 5800 2850
+Wire Wire Line
+	5800 2850 5800 2450
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 61D85264
+P 5850 4250
+F 0 "J2" H 5930 4242 50  0000 L CNN
+F 1 "Okidni impuls" H 5930 4151 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 5850 4250 50  0001 C CNN
+F 3 "~" H 5850 4250 50  0001 C CNN
+	1    5850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 61D88AAA
+P 5650 4750
+F 0 "#PWR0110" H 5650 4500 50  0001 C CNN
+F 1 "GND" H 5655 4577 50  0000 C CNN
+F 2 "" H 5650 4750 50  0001 C CNN
+F 3 "" H 5650 4750 50  0001 C CNN
+	1    5650 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4350 5650 4750
+Wire Wire Line
+	5550 4250 5650 4250
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 61E1BA04
+P 1950 2400
+F 0 "J1" H 2030 2392 50  0000 L CNN
+F 1 "Napajanje" H 2030 2301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 1950 2400 50  0001 C CNN
+F 3 "~" H 1950 2400 50  0001 C CNN
+	1    1950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 61E1D9D5
+P 1700 1950
+F 0 "#PWR0102" H 1700 1800 50  0001 C CNN
+F 1 "VCC" H 1715 2123 50  0000 C CNN
+F 2 "" H 1700 1950 50  0001 C CNN
+F 3 "" H 1700 1950 50  0001 C CNN
+	1    1700 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1950 1700 2400
+Wire Wire Line
+	1700 2400 1750 2400
+Wire Wire Line
+	1750 2500 1700 2500
+$EndSCHEMATC
